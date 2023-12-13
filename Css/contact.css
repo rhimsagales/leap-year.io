@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'poppins';
-    src: url(../Font/Poppins-Light.ttf);
+    src: url(/Font/Poppins-Light.ttf);
 }
 
 * {
@@ -16,7 +16,7 @@
 }
 
 :root {
-    --background-image: url(../Images/bg8.jpg);
+    --background-image: url(Images/bg8.jpg);
     --font-color: #ffffff;
     --font-family-anton: 'Anton', sans-serif;
     --font-family-poppins: 'poppins';
