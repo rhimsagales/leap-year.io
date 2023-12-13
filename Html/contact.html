@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../Css/contact.css">
+    <title>Checker | LeapYear</title>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <div class="brand-container">
+                <span>Leap<span>Year</span></span>
+                <span>Checker</span>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+            </button>
+            
+        </div>
+        <nav id="first-nav">
+            <ul>
+                <li>
+                    <a href="/Html/index.html" >Home</a>
+                </li>
+                <li>
+                    <a href="/Html/main.html">Checker</a>
+                </li>
+                <li>
+                    <a href="/Html/contact.html">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <nav id="second-nav">
+        <ul>
+            <li>
+                <a href="/Html/landingpage.html" >Home</a>
+            </li>
+            <li>
+                <a href="/Html/main.html">Checker</a>
+            </li>
+            <li>
+                <a href="/Html/contact.html">Contact Me</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="contact">
+        <div class="contactOne">
+            
+            <span>Send me a Text Message!</span>
+            <div class="message-container">
+                <div class="message-info">
+                    <input type="number" placeholder="Your Contact Number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="12">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message..."></textarea>
+                </div>
+                <button id="first-button"><span>Send</span></button>
+                <div id="sent-alertOne">
+                    <img src="/Images/check.svg" alt="">   
+                    <span>Message sent!</span>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="contactTwo">
+            <span>Send me an E-Mail!</span>
+            <div class="message-containerTwo">
+                <div class="message-infoTwo">
+                    <input type="email" placeholder="Your E-Mail"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="50">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message..."></textarea>
+                </div>
+                <button id="second-button"><span>Send</span></button>
+                <div id="sent-alertTwo">
+                    <img src="/Images/check.svg" alt="">   
+                    <span>Message sent!</span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="disable-screen">
+
+    </div>
+    <footer>
+        <p>© 2023 Rhim Angelo Sagales. All rights reserved.</p>
+    </footer>
+    <div class="error">
+        <span>Sorry for the inconvenience. Currently, our website does not support devices with a screen width of 319px or less and height of 600px or less. We are working to make our site more accessible and appreciate your patience.</span>
+    </div>
+    <script src="/JavaScript/contact.js"></script>
+
+</body>
+</html>

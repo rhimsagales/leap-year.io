@@ -1,0 +1,819 @@
+@font-face {
+    font-family: 'poppins';
+    src: url(../Font/Poppins-Light.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@property --angle-gradient {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+
+}
+
+:root {
+    --background-image: url(../Images/bg8.jpg);
+    --font-color: #ffffff;
+    --font-family-anton: 'Anton', sans-serif;
+    --font-family-poppins: 'poppins';
+    color: var(--font-color);
+    font-family: var(--font-family-poppins);
+}
+body {
+    background-image: linear-gradient(68deg, rgba(20,20,20,0.8855917366946778) 18%, rgba(20,20,20,0) 79%),
+    var(--background-image);
+    height: 100vh;
+    max-height: 800px;
+    width: 100vw;
+    max-width: 1700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    backdrop-filter: brightness(1);
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    grid-template-rows: .25fr 1.6fr .1fr;
+    grid-template-areas: 
+    'header header'
+    'contents checker'
+    'footer footer';
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+
+
+}
+body > header {
+    grid-area: header;
+    box-sizing: border-box;
+    
+}
+body > header {
+    display: grid;
+    grid-template-columns: 40vw 60vw;
+    grid-template-areas: 
+    'brand nav';
+
+}
+body > header > .brand {
+    grid-area: brand;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+
+}
+body > header > .brand > .brand-container > span {
+    font-size: clamp(26px, 2.5vw, 40px);
+    font-weight: bold;
+}
+body > header > .brand > .brand-container >  span:nth-child(1) {
+    color: aqua;
+}
+body > header > .brand > .brand-container > span:nth-child(2) {
+    color: rgb(0, 183, 255);
+}
+
+body > header > nav {
+    grid-area: nav;
+    box-sizing: border-box;
+
+
+}
+body > header > nav > ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    height: 100%;
+    position: relative;
+}
+body > header > nav > ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    
+}
+body > header > nav > ul > li:nth-child(1)::after {
+    content: "";
+    border-radius: 2px;
+    position: absolute;
+    top: 75px;
+    width: 80px; /* Set initial full width */
+    height: 4px;
+    background-color: aqua;
+    transform-origin: center; /* Set the origin of the transformation to center */
+    transform: scaleX(0);
+    transition: .1s ease-in-out; /* Initially scale it to 0 */
+}
+
+body > header > nav > ul > li:hover:nth-child(1)::after {
+    transform: scaleX(1.2);
+    transition: .1s ease-in-out; /* On hover, change the scale back to 1 */
+}
+body > header > nav > ul > li:nth-child(2)::after {
+    content: "";
+    border-radius: 2px;
+    position: absolute;
+    top: 75px;
+    width: 80px; /* Set initial full width */
+    height: 4px;
+    background-color: aqua;
+    transform-origin: center; /* Set the origin of the transformation to center */
+    transform: scaleX(0);
+    transition: .1s ease-in-out; /* Initially scale it to 0 */
+}
+
+body > header > nav > ul > li:hover:nth-child(2)::after {
+    transform: scaleX(1.9);
+    transition: .1s ease-in-out; /* On hover, change the scale back to 1 */
+}
+body > header > nav > ul > li:nth-child(3)::after {
+    content: "";
+    border-radius: 2px;
+    position: absolute;
+    top: 75px;
+    width: 80px; /* Set initial full width */
+    height: 4px;
+    background-color: aqua;
+    transform-origin: center; /* Set the origin of the transformation to center */
+    transform: scaleX(0);
+    transition: .1s ease-in-out; /* Initially scale it to 0 */
+}
+
+body > header > nav > ul > li:hover:nth-child(3)::after {
+    transform: scaleX(2.7);
+    transition: .1s ease-in-out; /* On hover, change the scale back to 1 */
+}
+body > header > nav > ul > li > a {
+   text-decoration: none;
+   color: var(--font-color);
+   font-size: clamp(14px, 1vw, 20px);
+   letter-spacing: 8px;
+   font-weight: bold;
+}
+
+body > .content {
+    grid-area: contents;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 2.5vw;
+    padding-right: 0.0625vw;
+    padding-left: 7.5vw;
+
+
+    
+
+
+    
+
+}
+body > .content > .content-container {
+
+    height: 100%;
+    width: 90%;
+ 
+}
+body > .content > .content-container > h1 {
+    font-size: clamp(36px, 5vw, 81px);
+    line-height: 6.25vw;
+    font-weight: bolder;
+    
+
+}
+
+body > .content > .content-container > p {
+    text-align: justify;
+    text-wrap: wrap;
+    font-size: clamp(15.6px, 1.2vw, 20px);
+    line-height: 4.5vh;
+    
+
+}
+body > .content > .content-container > p:nth-child(3) {
+    position: relative;
+    top: 25px;
+    
+}
+body > .checker {
+    grid-area: checker;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+
+    
+
+
+}
+body > .checker > .checker-container {
+    border: 4px solid white;
+    border-radius: 20px;
+    width: clamp(400px, 55% ,441px);
+    height: clamp(500px,95%, 761px);
+    position: relative;
+    right: clamp(0, 3.125vw, 51px);
+    background-color: hsla(0, 0%, 0%, .5);
+    box-shadow: 2px 4px 5px #fff;
+    box-sizing: border-box;
+
+}
+body > .checker > .checker-container > .input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 60%;
+    box-sizing: border-box;
+    border-bottom: 2px solid white;
+
+}
+body > .checker > .checker-container > .input-section > span {
+    font-size: clamp(25px, 2vw, 35px);
+    font-weight: bold;
+}
+body > .checker > .checker-container > .input-section > input {
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 60%;
+    height: 10%;
+    text-align: center;
+    color: var(--font-color);
+    font-family: var(--font-family-poppins);
+    font-size: clamp(16px, 1.25vw, 21px);
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+body > .checker > .checker-container > .input-section > input:not(:placeholder-shown) {
+    border: 3px solid aqua;
+    transition: .5s ease-in-out;
+}
+body > .checker > .checker-container > .input-section > input:hover {
+    border: 3px solid aqua;
+    transition: .5s ease-in-out;
+}
+body > .checker > .checker-container > .input-section > input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    
+    margin: 0;
+}
+body > .checker > .checker-container > .input-section > input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+body > .checker > .checker-container > .input-section > button {
+    width: 40%;
+    height: 10%;
+    font-size: clamp(11px, 1.25vw, 21px);
+    font-family: var(--font-family-poppins);
+    color: var(--font-color);
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 0;
+    margin: 0;
+    transform: scale(1);
+    transition: .5s ease-in-out;
+    
+}
+body > .checker > .checker-container > .input-section > button:hover {
+    border: 2px solid aqua;
+    transition: .1s ease-in-out;
+}
+body > .checker > .checker-container > .input-section > button:active {
+    border: 2px solid rgb(0, 183, 255);
+    transform: scale(.9);
+    transition: .2s ease-in-out;
+
+}
+body > .checker > .checker-container > .output-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 30%;
+}
+body > .checker > .checker-container > .output-section > span:nth-child(1) {
+    font-size: clamp(22px, 1.5625vw, 27px);
+    font-weight: bold;
+}
+body > .checker > .checker-container > .output-section > #result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 30%;
+    font-size: clamp(20px, 2vw, 35px);
+}
+body > footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid aqua;
+
+}
+body > footer > p {
+    color: grey;
+    font-size: 13px;
+    
+}
+body > header > .brand > .hamburger {
+    display: none;
+}
+
+body > nav {
+    display: none;
+}
+.error {
+    display: none;
+}
+
+   
+
+
+    
+    
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-columns: 20vw 80vw;
+        grid-template-rows: 10vh 90vh 92vh 8vh;
+        grid-template-areas:             
+            'header header'
+            'contents contents'
+            'checker checker'
+            'footer footer';
+        box-sizing: border-box;
+        overflow-x: hidden;
+        }
+        body > header {
+            grid-area: header;
+            
+      
+        }
+        body > header {
+            display: grid;
+            grid-template-columns: 35vw 65vw;
+            grid-template-areas: 
+            'brand nav';
+            
+        }
+        body > header > .brand {
+            grid-area: brand;
+        }
+        body > header > .brand {
+            justify-content: flex-start;
+            padding-left: 8px;
+            
+        }
+        body > header > nav {
+            grid-area: nav;
+        }
+        
+        
+        body > header > nav > ul > li:nth-child(1)::after {
+            top: 62px;
+        }
+        body > header > nav > ul > li:nth-child(2)::after {
+            top: 62px;
+        }
+        body > header > nav > ul > li:nth-child(3)::after {
+            top: 62px;
+        }
+        body > header > nav > ul > li:hover:nth-child(3)::after {
+            transform: scaleX(2.1);
+            
+        }
+        body > .content {
+            grid-area: contents;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 30px 100px  0 100px;
+            box-sizing: border-box;
+        }    
+       
+        
+        body > .content > .content-container > h1 {
+            font-size: 9vw;
+            line-height: 10vh;
+            text-align: center;
+            font-weight: 900;
+        } 
+        body > .content > .content-container > p{
+            font-size: clamp(20px, 2vw, 33px);
+            line-height: 5vw;
+            text-align: justify;
+        } 
+        body > .checker {
+            grid-area: checker;
+            padding-bottom: 0;
+            border-top: 2px solid white;
+            
+    
+        
+        }
+        body > .checker > .checker-container {
+            height: 90%;
+        }
+        body > footer {
+            grid-area: footer;
+        
+        }
+        body > nav {
+            display: none;
+        }
+      }
+      
+@media (min-width: 345px) and  (max-width: 767px) {
+    body {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 10vh 90vh 92vh 8vh;
+        grid-template-areas: 
+        'header'
+        'contents'
+        'checker'
+        'footer';
+        
+    }
+    body > header {
+        grid-area: header;
+        border-bottom: 2px solid white;
+
+    }
+    body > header {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        'brand nav';
+       
+    }
+    body > header > .brand {
+        grid-area: brand;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 30%;
+        padding-left: 10px;
+        padding-right: 8px;
+        
+    }
+    body > header > .brand > .brand-container > span {
+        font-size: clamp(20px, 2vw, 34px);
+    }
+    
+    body > header > .brand > .hamburger  {
+        background-color: transparent;
+        border: none;
+        width: 40px;
+        height: 31px;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        z-index: 7;
+
+    }
+    body > header > .brand > .hamburger > span,  body > header > .brand > .hamburger > span::before {
+        width: 100%;
+        height: 15%;
+        background-color: white;
+        border-radius: 5px;
+        transition: .5s ease-in-out;
+        
+        
+    }
+    body > header > .brand > .hamburger > span:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        padding: auto;
+    }
+    body > header > .brand > .hamburger:hover > span:before {
+        width: 60%;
+        transition: .5s ease-in-out;
+    }
+    body > header > .brand > .hamburger:hover > span {
+        width: 80%;
+        transition: .5s ease-in-out;
+    }
+    body > header > .brand > .hamburger.active > span:nth-child(1) {
+        transform: rotate(31deg) translateY(11px) translateX(7px);
+        background-color: red;
+    }
+    body > header > .brand > .hamburger.active > span:nth-child(2) {
+        transform: rotate(-31deg) translateY(-11px) translateX(7px);
+        background-color: red;
+    }
+    body > header > .brand > .hamburger.active > span::before {
+        width: 0;
+    }
+
+    
+    body > header > nav {
+        display: none;
+        
+
+    
+    }
+    body > nav {
+        background-color: #141414;
+        position: fixed;
+        display: none;
+        right: 0;
+        z-index: 6;
+        width: 50vw;
+        height: 100vh;
+        padding-top: 100px;
+        box-sizing: border-box;
+
+    }
+    body > nav > ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+        box-sizing: border-box;
+        
+    
+    }
+    body > nav > ul > li {
+        position: relative;
+        left: 80%;
+        border-bottom: 3px solid aqua;    
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        
+        
+    }
+    body > nav > ul > li > a {
+        text-decoration: none;
+        color: var(--font-color);
+        font-size: clamp(14px, 3vw, 25px);
+    }
+    body > .content {
+        grid-area: contents;
+        align-items: center;    
+        justify-content: flex-start;
+        padding: 10px 10vw 0 10vw;
+        
+    
+    }
+    body > .content > .content-container > h1 {
+        line-height: 9vw;
+        font-size: 8vw;
+        text-align: center;
+    }
+    body > .content > .content-container > p {
+        font-size: clamp(16px, 3vw, 24px);
+        line-height: clamp(27px, 5.5vw, 40px);
+        text-align: justify;
+        
+    }
+    
+    
+    body > .checker {
+        grid-area: checker;
+        border-top: 2px solid white;
+        padding-bottom: 0;
+     
+    
+    }
+    body > .checker > .checker-container {
+        width: clamp(310.5px, 80%, 462px);
+        height: 80%;
+    }
+    body > footer {
+        grid-area: footer;
+    }
+}
+      
+/* For mobile phones */
+@media (max-width: 344px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 90vh 92vh 8vh;
+        grid-template-areas: 
+        'header'
+        'contents'
+        'checker'
+        'footer';
+    }
+    body > header {
+        grid-area: header;
+        border-bottom: 2px solid white;
+
+    }
+    body > header {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        'brand nav';
+       
+    }
+    body > header > .brand {
+        grid-area: brand;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 30%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    body > header > .brand > .brand-container > span {
+        font-size: clamp(19.7px, 6.10vw, 22px);
+    }
+    body > header > .brand > .hamburger  {
+        background-color: transparent;
+        border: none;
+        width: 31px;
+        height: 23px;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        z-index: 7;
+    }
+    body > header > .brand > .hamburger > span,  body > header > .brand > .hamburger > span::before {
+        width: 100%;
+        height: 15%;
+        background-color: white;
+        border-radius: 5px;
+        transition: .5s ease-in-out;
+        
+    }
+    body > header > .brand > .hamburger > span:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        padding: auto;
+    }
+    body > header > .brand > .hamburger:hover > span:before {
+        width: 60%;
+        transition: .5s ease-in-out;
+    }
+    body > header > .brand > .hamburger:hover > span {
+        width: 80%;
+        transition: .5s ease-in-out;
+    }
+    body > header > .brand > .hamburger.active > span:nth-child(1) {
+        transform: rotate(37deg) translateY(7px) translateX(7px) ;
+        background-color: red;
+    }
+    body > header > .brand > .hamburger.active > span:nth-child(2) {
+        transform: rotate(-37deg) translateY(-7px) translateX(7px);
+        background-color: red;
+    }
+    body > header > .brand > .hamburger.active > span::before {
+        width: 0;
+    }
+    body > header > nav {
+        display: none;
+        grid-area: nav;
+    
+    }
+    body > nav {
+        background-color: #141414;
+        position: fixed;
+        display: none;
+        right: 0;
+        z-index: 6;
+        width: 80vw;
+        height: 100vh;
+        padding-top: 100px;
+        box-sizing: border-box;
+
+    }
+    body > nav > ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+        box-sizing: border-box;
+        
+    
+    }
+    body > nav > ul > li {
+        position: relative;
+        left: 100%;
+        border-bottom: 3px solid aqua;    
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        
+        
+    }
+    body > nav > ul > li > a {
+        text-decoration: none;
+        color: var(--font-color);
+        font-size: clamp(14px, 3vw, 25px);
+    }
+    body > .content {
+        grid-area: contents;
+        align-items: center;    
+        justify-content: flex-start;
+        padding: 10px 6vw 0 6vw;
+        
+    
+    }
+    body > .content > .content-container > h1 {
+        line-height: 10vw;
+        font-size: 9vw;
+        text-align: center;
+    }
+    body > .content > .content-container > p {
+        font-size: clamp(12px, 4vw, 18px);
+        line-height: 5vh;
+    }
+    body > .content > .content-container > p:nth-child(3) {
+        top: 10px;
+    }
+    
+    body > .checker {
+        grid-area: checker;
+        border-top: 2px solid white;
+        padding-bottom: 0;
+     
+    
+    }
+    body > .checker > .checker-container {
+        width: 85%;
+        height: 80%;
+    }
+    body > footer {
+        grid-area: footer;
+        border-top: grey solid 2px;
+    }
+  }
+  
+@media (max-width: 319px) or (max-height: 479px) {
+    body {
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    body > header {
+        display: none;
+    }
+    body > nav {
+        display: none;
+    }
+    body > .content {
+        display: none;
+    }
+    body > .checker {
+        display: none;
+    }
+    body > footer {
+        display: none;
+    }
+    body > .error {
+        display: flex;
+
+    }
+    body > .error > span {
+        color: black;
+        text-align: center;
+        font-weight: bold;
+    }
+}

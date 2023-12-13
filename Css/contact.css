@@ -1,0 +1,868 @@
+@font-face {
+    font-family: 'poppins';
+    src: url(/Font/Poppins-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@property --angle-gradient {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+
+}
+
+:root {
+    --background-image: url(/Images/bg8.jpg);
+    --font-color: #ffffff;
+    --font-family-anton: 'Anton', sans-serif;
+    --font-family-poppins: 'poppins';
+    color: var(--font-color);
+    font-family: var(--font-family-poppins);
+}
+body {
+    background-image: linear-gradient(68deg, rgba(20,20,20,0.8855917366946778) 18%, rgba(20,20,20,0) 79%),
+    var(--background-image);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    backdrop-filter: brightness(1);
+    display: grid;
+    grid-template-rows: 10vh 85vh 5vh;
+    grid-template-areas: 
+    'header'
+    'contact'
+    'footer';
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    position: relative;
+
+
+}
+body > header {
+    grid-area: header;
+    box-sizing: border-box;
+    
+}
+body > header {
+    display: grid;
+    grid-template-columns: 40vw 60vw;
+    grid-template-areas: 
+    'brand nav';
+   
+
+}
+body > header > .brand {
+    grid-area: brand;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    
+
+
+}
+body > header > .brand > .brand-container > span {
+    font-size: clamp(26px, 2.5vw, 40px);
+    font-weight: bold;
+}
+body > header > .brand > .brand-container >  span:nth-child(1) {
+    color: aqua;
+}
+body > header > .brand > .brand-container > span:nth-child(2) {
+    color: rgb(0, 183, 255);
+}
+
+body > header > nav {
+    grid-area: nav;
+    box-sizing: border-box;
+    
+    
+
+
+}
+body > header > nav > ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    height: 100%;
+    position: relative;
+}
+body > header > nav > ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    
+}
+body > header > nav > ul > li:nth-child(1)::after {
+    content: "";
+    border-radius: 2px;
+    position: absolute;
+    top: 75px;
+    width: 80px; /* Set initial full width */
+    height: 4px;
+    background-color: aqua;
+    transform-origin: center; /* Set the origin of the transformation to center */
+    transform: scaleX(0);
+    transition: .1s ease-in-out; /* Initially scale it to 0 */
+}
+
+body > header > nav > ul > li:hover:nth-child(1)::after {
+    transform: scaleX(1.2);
+    transition: .1s ease-in-out; /* On hover, change the scale back to 1 */
+}
+body > header > nav > ul > li:nth-child(2)::after {
+    content: "";
+    border-radius: 2px;
+    position: absolute;
+    top: 75px;
+    width: 80px; /* Set initial full width */
+    height: 4px;
+    background-color: aqua;
+    transform-origin: center; /* Set the origin of the transformation to center */
+    transform: scaleX(0);
+    transition: .1s ease-in-out; /* Initially scale it to 0 */
+}
+
+body > header > nav > ul > li:hover:nth-child(2)::after {
+    transform: scaleX(1.9);
+    transition: .1s ease-in-out; /* On hover, change the scale back to 1 */
+}
+body > header > nav > ul > li:nth-child(3)::after {
+    content: "";
+    border-radius: 2px;
+    position: absolute;
+    top: 75px;
+    width: 80px; /* Set initial full width */
+    height: 4px;
+    background-color: aqua;
+    transform-origin: center; /* Set the origin of the transformation to center */
+    transform: scaleX(0);
+    transition: .1s ease-in-out; /* Initially scale it to 0 */
+}
+
+body > header > nav > ul > li:hover:nth-child(3)::after {
+    transform: scaleX(2.7);
+    transition: .1s ease-in-out; /* On hover, change the scale back to 1 */
+}
+body > header > nav > ul > li > a {
+   text-decoration: none;
+   color: var(--font-color);
+   font-size: clamp(14px, 1vw, 20px);
+   letter-spacing: 8px;
+   font-weight: bold;
+}
+
+
+body > footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid aqua;
+
+}
+body > footer > p {
+    color: grey;
+    font-size: 13px;
+    
+}
+body > header > .brand > .hamburger {
+    display: none;
+}
+
+body > nav {
+    display: none;
+}
+.contact {
+    grid-area: contact;
+    display: grid;
+    grid-template-columns: 10% 38% 4% 38% 10%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas: 
+    '. . . . .'
+    '. contactOne . contactTwo .'
+    '. . . . .';
+}    
+.contact > .contactOne {
+    grid-area: contactOne;
+    background-color: #242424;
+    border: 3px solid aqua;
+    border-radius: 100px 20px 100px 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 3% 8% 2% 84% 3%;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-areas: 
+    '. . . '
+    '. invitation .'
+    '. . .'
+    '. message .'
+    '. . .';
+    align-items: center;
+    
+}
+.contact > .contactOne > span {
+    grid-area: invitation;
+    text-align: center;
+    font-size: clamp(21px, 2vw, 33px);
+    color: aqua;
+
+}
+.contact > .contactOne > .message-container {
+    grid-area: message;
+  
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 84% 2% 12% 2%;
+    grid-template-areas: 
+    'messagebox messagebox messagebox'
+    '. . .'
+    '. button .'
+    '. . .';
+}
+.contact > .contactOne > .message-container > .message-info {
+    grid-area: messagebox;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 2%;
+    display: grid;
+    grid-template-rows: 10%  2% 88%;
+    grid-template-areas: 
+    'number'
+    '.'
+    'message';
+
+
+}
+.contact > .contactOne > .message-container > .message-info > input {
+    grid-area: number;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 120%;
+    padding: 2%;
+    width: 130px;
+    font-family: var(--font-family-poppins);
+    
+}
+.contact > .contactOne > .message-container > .message-info > input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.contact > .contactOne > .message-container > .message-info > input:placeholder-shown {
+    font-size: 73%;
+    font-family: var(--font-family-poppins);
+}
+.contact > .contactOne > .message-container > .message-info > input:not(:placeholder-shown) {
+    border: 2px solid aqua;
+}
+.contact > .contactOne > .message-container > .message-info > textarea {
+    grid-area: message;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+    padding: 2%;
+    color: white;
+    font-size: 120%;
+    font-family: var(--font-family-poppins);
+    resize: none;
+}
+.contact > .contactOne > .message-container > .message-info > textarea:not(:placeholder-shown) {
+    border: 2px solid aqua;
+}
+
+.contact > .contactOne > .message-container > button {
+    grid-area: button;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    transition: .5s ease-in-out;
+    transform: scale(1);
+}
+.contact > .contactOne > .message-container > button:active {
+    transition: .5s ease-in-out;
+    transform: scale(.8);
+    
+}
+.contact > .contactOne > .message-container > button:hover {
+    border: 3px solid aqua;
+    transition: .3s ease-in-out;
+    
+}
+.contact > .contactOne > .message-container > button > span{
+    font-family: var(--font-family-poppins);
+    font-size: clamp(16px, 1.4vw, 23px);
+    color: white;
+    transition: .5s ease-in-out;
+}
+.contact > .contactOne > .message-container > button:hover > span {
+    color: aqua;
+    transition: .3s ease-in-out;
+}
+.contact > .contactTwo {
+    grid-area: contactTwo;
+    background-color: #242424;
+    border: 3px solid aqua;
+    border-radius: 20px 100px 20px 100px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 3% 8% 2% 84% 3%;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-areas: 
+    '. . . '
+    '. invitation .'
+    '. . .'
+    '. message .'
+    '. . .';
+    align-items: center;
+    
+}
+.contact > .contactTwo > span {
+    grid-area: invitation;
+    text-align: center;
+    font-size: clamp(20px, 2vw, 33px);
+    color: aqua;
+
+}
+.contact > .contactTwo > .message-containerTwo {
+    grid-area: message;
+  
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 84% 2% 12% 2%;
+    grid-template-areas: 
+    'messagebox messagebox messagebox'
+    '. . .'
+    '. button .'
+    '. . .';
+}
+.contact > .contactTwo > .message-containerTwo > .message-infoTwo {
+    grid-area: messagebox;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 2%;
+    display: grid;
+    grid-template-rows: 10%  2% 88%;
+    grid-template-areas: 
+    'number'
+    '.'
+    'message';
+
+
+}
+.contact > .contactTwo > .message-containerTwo > .message-infoTwo > input {
+    grid-area: number;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 120%;
+    padding: 2%;
+    width:  95.5%;
+    font-family: var(--font-family-poppins);
+    
+}
+.contact > .contactTwo > .message-containerTwo > .message-infoTwo > input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.contact > .contactTwo > .message-containerTwo > .message-infoTwo > input:placeholder-shown {
+    font-size: 73%;
+    font-family: var(--font-family-poppins);
+}
+.contact > .contactTwo > .message-containerTwo > .message-infoTwo > input:not(:placeholder-shown) {
+    border: 2px solid aqua;
+}
+.contact > .contactTwo > .message-containerTwo > .message-infoTwo > textarea {
+    grid-area: message;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+    padding: 2%;
+    color: white;
+    font-size: 120%;
+    font-family: var(--font-family-poppins);
+    resize: none;
+}
+.contact > .contactTwo > .message-containerTwo > .message-infoTwo > textarea:not(:placeholder-shown) {
+    border: 2px solid aqua;
+}
+
+.contact > .contactTwo > .message-containerTwo > button {
+    grid-area: button;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    transition: .5s ease-in-out;
+    transform: scale(1);
+}
+.contact > .contactTwo > .message-containerTwo > button:active {
+    transition: .5s ease-in-out;
+    transform: scale(.8);
+    
+}
+.contact > .contactTwo > .message-containerTwo > button:hover {
+    border: 3px solid aqua;
+    transition: .3s ease-in-out;
+    
+}
+.contact > .contactTwo > .message-containerTwo > button > span{
+    font-family: var(--font-family-poppins);
+    font-size: clamp(16px, 1.4vw, 23px);
+    color: white;
+    transition: .5s ease-in-out;
+}
+.contact > .contactTwo > .message-containerTwo > button:hover > span {
+    color: aqua;
+    transition: .3s ease-in-out;
+}
+
+
+.error {
+    display: none;
+}
+body > #disable-screen {
+    background-color: hsla(0, 0%, 0%, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -15;
+    display: none;
+}
+.message-container > #sent-alertOne {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    scale: 0;
+    transform-origin: left;
+    width: 15%;
+    min-width: 170px;
+    height: 15%;
+    background-color: #343434;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid aqua;
+    border-radius: 20px 10px 20px 10px;
+    gap: 3%;
+    transition: .5s ease-in-out;
+    z-index: 9;
+
+}
+.sent-alertOne > span {
+    text-align: center;
+    
+
+}
+.sent-alertOne > img {
+    width: 25px;
+    height: 25px;
+    
+}
+.message-containerTwo > #sent-alertTwo {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    scale: 0;
+    transform-origin: left;
+    width: 15%;
+    min-width: 170px;
+    height: 15%;
+    background-color: #343434;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid aqua;
+    border-radius: 20px 10px 20px 10px;
+    gap: 3%;
+    transition: .5s ease-in-out;
+    z-index: 9;
+
+}
+.message-containerTwo .sent-alertTwo > span {
+    text-align: center;
+    
+
+}
+.message-containerTwo > .sent-alertTwo > img {
+    width: 25px;
+    height: 25px;
+    
+}
+
+    
+@media (min-width: 500px) and (max-width: 999px) {
+    body {
+        grid-template-columns: 100vw;
+        grid-template-rows: 10vh 90vh 95vh 5vh;
+        grid-template-areas: 
+        'header'
+        'contact'
+        'contact'
+        'footer';
+        
+    }
+    .contact {
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 5% 43% 4% 43% 5%;
+        grid-template-areas: 
+        '. . .'
+        '. contactOne .'
+        '. . . '
+        '. contactTwo .'
+        '. . . ';
+    } 
+    .contact > .contactOne {
+        grid-area: contactOne;
+    }
+    .contact > .contactTwo {
+        grid-area: contactTwo;
+    }
+    body > header {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-areas: 
+        'brand';
+    }
+    body > header > nav{
+        display: none;
+    }
+    body > nav {
+        display: flex;
+    }
+    body > header > .brand > .hamburger  {
+        background-color: transparent;
+        border: none;
+        width: 40px;
+        height: 31px;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        z-index: 7;
+
+    }
+    body > header > .brand > .hamburger > span,  body > header > .brand > .hamburger > span::before {
+        width: 100%;
+        height: 15%;
+        background-color: white;
+        border-radius: 5px;
+        transition: .5s ease-in-out;
+        
+        
+    }
+    body > header > .brand > .hamburger > span:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        padding: auto;
+    }
+    body > header > .brand > .hamburger:hover > span:before {
+        width: 60%;
+        transition: .5s ease-in-out;
+    }
+    body > header > .brand > .hamburger:hover > span {
+        width: 80%;
+        transition: .5s ease-in-out;
+    }
+    body > header > .brand > .hamburger.active > span:nth-child(1) {
+        transform: rotate(31deg) translateY(11px) translateX(7px);
+        background-color: red;
+    }
+    body > header > .brand > .hamburger.active > span:nth-child(2) {
+        transform: rotate(-31deg) translateY(-11px) translateX(7px);
+        background-color: red;
+    }
+    body > header > .brand > .hamburger.active > span::before {
+        width: 0;
+    }
+    body > header > .brand  {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 60px 0 60px;
+    }
+    body > nav {
+        background-color: #141414;
+        position: fixed;
+        display: none;
+        right: 0;
+        z-index: 6;
+        width: 50vw;
+        height: 100vh;
+        padding-top: 100px;
+        box-sizing: border-box;
+
+    }
+    body > nav > ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+        box-sizing: border-box;
+        
+    
+    }
+    body > nav > ul > li {
+        position: relative;
+        left: 80%;
+        border-bottom: 3px solid aqua;    
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        
+        
+    }
+    body > nav > ul > li > a {
+        text-decoration: none;
+        color: var(--font-color);
+        font-size: clamp(14px, 3vw, 25px);
+    }
+    
+}
+@media (min-width: 320px) and (max-width: 499px) {
+    body {
+        grid-template-columns: 100vw;
+        grid-template-rows: 10vh 90vh 95vh 5vh;
+        grid-template-areas: 
+        'header'
+        'contact'
+        'contact'
+        'footer';
+    }
+    .contact {
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 3% 43% 8% 43% 3%;
+        grid-template-areas: 
+        '. . .'
+        '. contactOne .'
+        '. . . '
+        '. contactTwo .'
+        '. . . ';
+    } 
+    
+    body > header {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-areas: 
+        'brand';
+    }
+    body > header > nav{
+        display: none;
+    }
+    body > nav {
+        display: flex;
+    }
+    body > header > .brand > .brand-container > span {
+        font-size: 6vw;
+    }
+    body > header > .brand > .hamburger  {
+        background-color: transparent;
+        border: none;
+        width: 30px;
+        height: 21px;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        z-index: 7;
+    
+
+    }
+    body > header > .brand > .hamburger > span,  body > header > .brand > .hamburger > span::before {
+        width: 100%;
+        height: 15%;
+        background-color: white;
+        border-radius: 5px;
+        transition: .5s ease-in-out;
+        
+        
+    }
+    body > header > .brand > .hamburger > span:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        padding: auto;
+    }
+    body > header > .brand > .hamburger:hover > span:before {
+        width: 60%;
+        transition: .5s ease-in-out;
+    }
+    body > header > .brand > .hamburger:hover > span {
+        width: 80%;
+        transition: .5s ease-in-out;
+    }
+    body > header > .brand > .hamburger.active > span:nth-child(1) {
+        transform: rotate(32deg) translateY(6.9px) translateX(6px);
+        background-color: red;
+    }
+    body > header > .brand > .hamburger.active > span:nth-child(2) {
+        transform: rotate(-32deg) translateY(-6.9px) translateX(6px);
+        background-color: red;
+    }
+    body > header > .brand > .hamburger.active > span::before {
+        width: 0;
+    }
+    body > header > .brand  {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px 0 30px;
+    }
+    body > nav {
+        background-color: #141414;
+        position: fixed;
+        display: none;
+        right: 0;
+        z-index: 6;
+        width: 50vw;
+        height: 100vh;
+        padding-top: 100px;
+        box-sizing: border-box;
+
+    }
+    body > nav > ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+        box-sizing: border-box;
+        
+    
+    }
+    body > nav > ul > li {
+        position: relative;
+        left: 80%;
+        border-bottom: 3px solid aqua;    
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        
+        
+    }
+    body > nav > ul > li > a {
+        text-decoration: none;
+        color: var(--font-color);
+        font-size: clamp(14px, 3vw, 25px);
+    }
+}
+
+
+
+@media (max-width: 319px) or (max-height: 600px) {
+    body {
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    body > header {
+        display: none;
+    }
+    body > nav {
+        display: none;
+    }
+    body > .contact {
+        display: none;
+    }
+    body > footer {
+        display: none;
+    }
+    body > .error {
+        display: flex;
+
+    }
+    body > .error > span {
+        color: black;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+@media (min-height: 1100px ) and (max-height: 3000px){
+    body {
+        grid-template-rows: 8vh 89vh 3vh;
+        grid-template-areas: 
+        'header'
+        'contact'
+        'footer';
+    }
+    .contact {
+        grid-area: contact;
+        display: grid;
+        grid-template-columns: 10% 38% 4% 38% 10%;
+        grid-template-rows: 15% 70% 15%;
+        grid-template-areas: 
+        '. . . . .'
+        '. contactOne . contactTwo .'
+        '. . . . .';
+    }    
+    
+}
+@media (min-width: 1000px) and (max-width: 3000px) {
+    .message-containerTwo > #sent-alertTwo {
+        top: 50%;
+    }
+}
+@media (max-width: 999px) {
+    body > #disable-screen {
+        height: 200vh;
+    }
+}
+
+/*Border Radius Adjustment*/
+@media (max-width: 600px) {
+    .contact > .contactOne {
+        border-radius: 50px 20px 50px 20px;
+    }
+    .contact > .contactTwo {
+        border-radius: 20px 50px 20px 50px;
+    }
+}

@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'poppins';
+    src: url(../Font/Poppins-Light.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --background-image: url(../Images/bg.jpg);
+    --font-color: #ffffff;
+    --font-family-anton: 'Anton', sans-serif;
+    --font-family-poppins: 'poppins';
+    color: var(--font-color);
+    font-family: var(--font-family-poppins);
+}
+body  {
+    background-image: linear-gradient(220deg, 
+    hsla(0 0% 0%  / .6), hsla(0 0% 0% /.5)), 
+    var(--background-image);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    backdrop-filter: brightness(1.5);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+.container{
+    width: 89%;
+    height: clamp(70px, 9.375vw, 155px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0;
+}
+.description {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    padding: 0;
+    
+}
+
+.description > span {
+    font-family: var(--font-family-poppins);
+    font-size: clamp(26px, 7vw, 180px);
+    color: #d1cbd1;
+    transition: ease-in-out .3s;
+}
+.description > span:nth-child(1), .description > span:nth-child(2), .description > span:nth-child(3), .description > span:nth-child(4), .description > span:nth-child(5), .description > span:nth-child(6), .description > span:nth-child(7), .description > span:nth-child(8), .description > span:nth-child(9), .description > span:nth-child(10), .description > span:nth-child(11), .description > span:nth-child(12), .description > span:nth-child(13), .description > span:nth-child(14), .description > span:nth-child(15), .description > span:nth-child(16), .description > span:nth-child(17) {
+    display: none;
+}
+
+.button-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.button-container > button {
+    border: none;
+    padding: none;
+    margin-top: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+ 
+}
+.button-container > button > span {
+    color: var(--font-color);
+    font-family: var(--font-family-poppins);
+    font-size: clamp(12px, 1.1vw, 32px);
+}
+.button-container > button:hover {
+    background: rgba(255,255,255,0.1);
+    -webkit-backdrop-filter: blur(13px);
+    backdrop-filter: blur(13px);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+.description > span:hover {
+    transform: translateY(-20px);
+    transition: ease-in-out .3s;
+}
+#writing {
+    width: clamp(3px, 0.3125vw, 6px);
+    height: clamp(45px, 5.3125vw, 90px);
+    background-color: white;
+    animation: typing .4s alternate infinite;
+    display: inline;
+    position: relative;
+    right: 5px;
+}
+@keyframes typing {
+    0% {
+        background-color: black;
+    }
+    50% {
+        background-color: grey;
+    }
+    100% {
+        background-color: white;
+    }
+
+}
+.icon-container {
+    width: fit-content;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 2.5vw, 45px);
+    position: relative;
+    bottom: 1vw;
+
+}
+.icon-container > a  {
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: clamp(60px, 6.25vw, 110px);
+    height: clamp(60px, 6.25vw, 110px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+    background-color: transparent;
+    color: var(--color);
+    font-size: clamp(1em, 1.6vw, 2.2em);
+   
+    
+}
+.icon-container > a  {
+    color: #fff;
+}
+.icon-container > a:hover {
+    background: var(--color);
+    color: #050801;
+    box-shadow: 0 0 5px var(--color),
+                0 0 25px var(--color),
+                0 0 50px var(--color),
+                0 0 200px var(--color);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/style-main.css">
+    <link rel="stylesheet" href="../Images/tabicon.jpg">
+    <title>Checker | LeapYear</title>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <div class="brand-container">
+                <span>Leap<span>Year</span></span>
+                <span>Checker</span>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+            </button>
+            
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/Html/index.html" >Home</a>
+                </li>
+                <li>
+                    <a href="/Html/main.html">Checker</a>
+                </li>
+                <li>
+                    <a href="/Html/contact.html">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <nav id="second-nav">
+        <ul>
+            <li>
+                <a href="/Html/landingpage.html" >Home</a>
+            </li>
+            <li>
+                <a href="/Html/main.html">Checker</a>
+            </li>
+            <li>
+                <a href="/Html/contact.html">Contact Me</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="content-container">
+            <h1>
+                What is a <span style="color: aqua;">Leap Year</span>?
+            </h1>
+            <p>
+                A leap year is a year that has an extra day, making it 366 days instead of the usual 365. This happens approximately every four years to account for the fact that it takes about 365.25 days for Earth to orbit the Sun. This extra day is added to the month of February, which has 29 days in a leap year.
+            </p>
+            <p>
+                Now, if you’re wondering whether a particular year is a leap year or not, I have good news for you! You can check it out on this website that i've created. It’s a handy tool that allows users to quickly and easily determine if a year is a leap year. So go ahead and give it a try!
+            </p>
+        </div>
+    </div>
+    <div class="checker">
+        <div class="checker-container">
+            <div class="input-section">
+                <span><span style="color: aqua;">Leap Year</span> Checker</span>
+                <input type="number" id="input" placeholder="Enter a Year" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  maxlength="4">
+                <button id="check">Check</button>
+            </div>
+            <div class="output-section">
+                <span>Result:</span>
+                <span id="result"></span>
+            </div>
+        </div>
+    </div>
+    <div class="error">
+        <span>Sorry for the inconvenience. Currently, our website does not support devices with a screen width of 319px or less and height of 479px or less. We are working to make our site more accessible and appreciate your patience.</span>
+    </div>
+    <footer>
+        <p>© 2023 Rhim Angelo Sagales. All rights reserved.</p>
+    </footer>
+    <script src="../JavaScript/main.js"></script>
+</body>
+</html>
